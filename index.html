@@ -188,8 +188,6 @@ y &lt;- x[x$county!=&quot;PALM BEACH&quot;,]</code></pre>
 ## Multiple R-squared:  0.8499, Adjusted R-squared:  0.8476 
 ## F-statistic: 362.4 on 1 and 64 DF,  p-value: &lt; 2.2e-16</code></pre>
 <p>The square root model also has a high R^2 (0.8499) and not quite as low resid std error (2.739), but still strong fit.</p>
-<div id="predictions" class="section level2">
-<h2>Predictions</h2>
 <p>Now that we’ve fitted the model, I use predict() to predict votes for Buchanan, with <code>newdata=pb</code> as an option. I want to compare this prediction to the actual votes for Buchanan in Palm Beach, 3407.</p>
 <pre class="r"><code>pb$logpat2000 &lt;- log(pb$buchanan2000)
 pb$logw2000 &lt;- log(pb$bush2000)
@@ -203,7 +201,6 @@ exp(predict(lm.test1, newdata=pb)) # ~592 votes</code></pre>
 <pre><code>##       67 
 ## 626.3663</code></pre>
 <p>These are way off from the observed value of 3407 votes. Given that previously we saw the models excluding PALM BEACH data had good linear fit, it strikes me as anomolous that observed votes differs drastically from what should be a relatively good linear prediction.</p>
-</div>
 
 
 
