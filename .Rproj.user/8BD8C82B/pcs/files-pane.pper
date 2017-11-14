@@ -1,0 +1,9 @@
+{
+    "path" : "~/Desktop/predict_2000election",
+    "sortOrder" : [
+        {
+            "ascending" : true,
+            "columnIndex" : 2
+        }
+    ]
+}
